@@ -4,9 +4,14 @@ import SideMenu from '@/components/side-menu';
 import MainGrid from "./main-grid";
 import Header from "./header";
 import { Stack } from "@mui/system";
-
-export default async function dashboard() {
-
+import { setRequestLocale } from 'next-intl/server';
+import { Locale } from '@/types/locals';
+type Props = {
+  params: {locale: Locale};
+};
+export default async function DashboardPage({ params }: Props) {
+  const { locale } = await params; 
+  setRequestLocale(locale);
   return (
     <Box sx={{ display: 'flex' }}>
       <SideMenu />

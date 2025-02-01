@@ -49,7 +49,7 @@ export default function LoginForm() {
     try {
       const validatedData = loginSchema.parse(formValues);
       await auth?.loginWithEmail(validatedData.email, validatedData.password).then(() => {
-        router.push('/dashboard');
+        router.push('/en/dashboard');
       });
     } catch (error: unknown) {
       if (error instanceof z.ZodError) {
@@ -88,7 +88,7 @@ export default function LoginForm() {
                 },
               }}
             >
-              <Image src={'./img-logo.svg'} width={100} height={100} alt='logo' />
+              <Image src={'/img-logo.svg'} width={150} height={150} alt='logo' />
             </Box>
 
             <FormControl fullWidth>
@@ -117,7 +117,7 @@ export default function LoginForm() {
                 alignSelf: 'center',
                 textDecoration: 'none',
                 display: 'block',
-                mt: 2,
+                mt: 3,
                 mb: 1,
               }}
             >

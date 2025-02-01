@@ -39,7 +39,7 @@ export default function SideMenu() {
           p: 1.5,
         }}
       >
-        <Image src='./img-logo.svg' width='100' height='100' alt='logo' />
+        <Image src='/img-logo.svg' width='100' height='100' alt='logo' />
       </Box>
       <Divider />
       <Box

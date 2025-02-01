@@ -5,9 +5,11 @@ import Typography from '@mui/material/Typography';
 import ReminderCards from '@/components/reminder-cards';
 import ChartDueDates from '@/components/ui/ChartDueDates';
 import { getDueDateData } from '@/data/due-date';
+import { getTranslations } from 'next-intl/server';
 
 export default async function DueDate() {
     const { data } = await getDueDateData();
+    const t = await getTranslations('DueDate');
     return (
         <Grid container
             spacing={2}
@@ -20,7 +22,7 @@ export default async function DueDate() {
             </Grid>
             <Grid size={{ xs: 12, sm: 6 }} sx={{ mb: 5 }}>
                 <Typography component="h2" variant="h6" sx={{ mb: 1 }} >
-                    Reminder
+                    {t('title')}
                 </Typography>
                 <ReminderCards DueDates={data}/>
             </Grid>

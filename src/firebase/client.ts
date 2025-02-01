@@ -1,30 +1,23 @@
-import { initializeApp, getApps } from "firebase/app";
-import { Auth, getAuth } from "firebase/auth";
-import { FirebaseStorage, getStorage } from "firebase/storage";
-
+import { initializeApp } from "firebase/app";
+import {  getAuth } from "firebase/auth";
+import {  getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  apiKey: "AIzaSyC3DVfBIYKs-EbQpA7k7E7UdLK5ILQgZ9k",
+  authDomain: "mylorry-org.firebaseapp.com",
+  projectId: "mylorry-org",
+  storageBucket: "mylorry-org.appspot.com",
+  messagingSenderId: "898371880955",
+  appId: "1:898371880955:web:6a55633646d58e12bded5e",
 };
 
-// Initialize Firebase
-const currentApps = getApps();
-let auth: Auth;
-let storage: FirebaseStorage;
+// let auth: Auth;
+// let storage: FirebaseStorage;
 
-if (!currentApps.length) {
-  const app = initializeApp(firebaseConfig);
-  auth = getAuth(app);
-  storage = getStorage(app);
-} else {
-  const app = currentApps[0];
-  auth = getAuth(app);
-  storage = getStorage(app);
-}
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const storage = getStorage(app);
+
 
 export { auth, storage };

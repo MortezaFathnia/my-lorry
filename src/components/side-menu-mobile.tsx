@@ -1,13 +1,9 @@
 'use client';
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider';
 import Drawer, { drawerClasses } from '@mui/material/Drawer';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
-import MenuButton from './ui/MenuButton';
 import MenuContent from './menu-content';
 
 interface SideMenuMobileProps {

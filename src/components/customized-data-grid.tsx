@@ -14,7 +14,7 @@ interface IPropsData {
 }
 
 export default function CustomizedDataGrid({ data }: IPropsData) {
-  const formattedSesssion=data.forms.map((form)=>formatSessionData(form.session,form.id))
+  const formattedSesssion=data?.forms.map((form)=>formatSessionData(form.session,form.id))
   return (
     <DataGrid
       checkboxSelection

@@ -2,7 +2,8 @@
 import * as React from 'react';
 import Stack from '@mui/material/Stack';
 import NavbarBreadcrumbs from '@/components/ui/NavbarBreadcrumbs';
-import ColorModeIconDropdown from '@/theme/ColorModeIconDropdown';
+import ColorModeIconDropdown from '@/components/color-mode-icon-dropdown';
+import LanguagesDropdown from '@/components/languages-dropdown';
 
 
 export default function Header() {
@@ -21,6 +22,7 @@ export default function Header() {
     >
       <NavbarBreadcrumbs />
       <Stack direction="row" sx={{ gap: 1 }}>
+        <LanguagesDropdown/>
         <ColorModeIconDropdown />
       </Stack>
     </Stack>

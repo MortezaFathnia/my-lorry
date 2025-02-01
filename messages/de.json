@@ -1,0 +1,12 @@
+{
+  "MainGrid": {
+    "title": "Hallo, Firdaus Razak"
+  },
+  "DueDate": {
+    "title": "Erinnerung",
+    "chartTitle": "Fälligkeitsdaten"
+  },
+  "ChartDueDates": {
+    "title": "Fälligkeitsdaten"
+  }
+}

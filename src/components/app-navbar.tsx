@@ -10,8 +10,9 @@ import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
 import SideMenuMobile from '@/components/side-menu-mobile';
 import MenuButton from './ui/MenuButton';
-import ColorModeIconDropdown from '@/theme/ColorModeIconDropdown';
+import ColorModeIconDropdown from '@/components/color-mode-icon-dropdown';
 import Image from 'next/image';
+import LanguagesDropdown from './languages-dropdown';
 
 const Toolbar = styled(MuiToolbar)({
   width: '100%',
@@ -65,12 +66,13 @@ export default function AppNavbar() {
             sx={{ justifyContent: 'center', mr: 'auto' }}
           >
             <MenuButton aria-label="menu" onClick={toggleDrawer(true)}>
-              <MenuRoundedIcon/>
+              <MenuRoundedIcon />
             </MenuButton>
             <SideMenuMobile open={open} toggleDrawer={toggleDrawer} />
-            <Image src='./img-logo.svg' width='60' height='40' alt='logo' />
+            <Image src='/img-logo.svg' width='60' height='40' alt='logo' />
           </Stack>
           <ColorModeIconDropdown />
+          <LanguagesDropdown />
         </Stack>
       </Toolbar>
     </AppBar>
